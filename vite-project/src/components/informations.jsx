@@ -44,9 +44,6 @@ function Info() {
             </div>
         </div>
        
-
-
-       {/*  asdas*/}
         </>
     )
 

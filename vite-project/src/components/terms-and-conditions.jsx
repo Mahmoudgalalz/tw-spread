@@ -102,7 +102,7 @@ function TermsAndConditions() {
                     </div>
                 </div>
             </div>
-            {/* asdasd */}
+       
         </>
 
     )
