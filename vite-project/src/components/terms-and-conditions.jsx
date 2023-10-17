@@ -8,8 +8,8 @@ function TermsAndConditions() {
         <>
             <div className=" flex  justify-center items-center h-screen ">
                 <div className="border-2 bg-black 0 text-white p-14 ">
-                    <h2 className="font-bold pb-6 text-md ">Terms Of Services </h2>
-                    <p className="text-sm overflow-y-scroll h-96 p-2 ">
+                    <h2 className="font-bold pb-6 text-md ">Terms Of Services !@ </h2>
+                    <p className="text-sm overflow-y-scroll h-96 p-2  ">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
                             <br />
