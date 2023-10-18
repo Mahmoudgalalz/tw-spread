@@ -1,1 +1,7 @@
 
+#root {
+    background: url(./images/autumn-poolside.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+}

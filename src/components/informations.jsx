@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { NavLink  } from "react-router-dom";
 function Info() {
@@ -37,7 +37,7 @@ function Info() {
                     </div>
                     <br />
                     <div>
-                        <button className="bg-purple-800 py-2 w-full rounded flex justify-center hover:bg-purple-900 text-white font-bold  " type="submit">Submit</button>
+                        <button className="bg-purple-800 py-2 w-full rounded flex justify-center hover:bg-purple-900 text-white font-bold">Submit</button>
                     </div>
 
                 </form>
