@@ -13,10 +13,10 @@ function Info() {
                         </h1>
                     </div>
                     <div className="mb-4">
-                        <label className="block text-white text-sm font-bold mb-2" For="Username">
-                            Username
+                        <label className="block text-white text-sm font-bold mb-2" For="Name">
+                            Name
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3  whiteleading-tight focus:outline-none focus:shadow-outline bg-black-rgba border-black text-white" id="Username" type="text" placeholder="Username" required />
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3  whiteleading-tight focus:outline-none focus:shadow-outline bg-black-rgba border-black text-white" id="Name" type="text" placeholder="Name" required />
                     </div>
                     <div className="mb-4">
                         <label className="block text-white text-sm font-bold mb-2" For="Email">
