@@ -7,14 +7,11 @@ function TermsAndConditions() {
     return (
         <>
 
-            <div className="fixed inset-0 bg-black bg-opacity-25
-                 backdrop-blur-sm flex justify-center items-center" id="Terms" >
-
+            <div className="absolute top-10 left-80  right-80 m-20 inset-0 bg-black bg-opacity-25
+                 backdrop-blur-sm  justify-center items-center hidden "  id="Terms" >
                 <div className="bg-white  p-2 rounded ">
                     <div className="font-bold" >
                         Terms of services</div>
-                    {/* <div className=" flex  justify-center items-center h-screen ">
-                     <div className="border-2 bg-black 0 text-white p-14 "> */}
                     <p className="text-sm overflow-y-scroll h-96 p-2 ">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
