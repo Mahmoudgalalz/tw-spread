@@ -1,14 +1,21 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-
+import React, { useRef, useState} from "react";
+import data from 'public/terms.json'
 // terms
 function Terms ()  {
+    const termsRef = useRef()
+    const checkbox = useRef()
    function ShowTerms(){
-    let Terms =document.getElementById("Terms");
-    Terms.classList.remove("hidden")
-  
-    
-
+    if(termsRef.current.classList.contains('hidden')){
+        termsRef.current.classList.remove('hidden')
+        termsRef.current.classList.add('flex')
+        setToggle(true);
+    }
+   }
+   const Clicked = (e) =>{
+    e.preventDefault();
+    checkbox.current.toggleAttribute('checked')
+    termsRef.current.classList.remove('flex')
+    termsRef.current.classList.add('hidden')
    }
     return (
         <div >
@@ -39,116 +46,31 @@ function Terms ()  {
                             <input className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline  bg-black-rgba border-black text-white" id="Cookies" type="text" placeholder="Cookies" required />
                         </div>
 
-                        <div className="text-white">
-                            <input id="checkbox" type="checkbox" required />
-                            <NavLink onClick={ShowTerms} to="/"> Terms and conditions </NavLink>
+                        <div className="text-white flex gap-2">
+                            <input id="checkbox" ref={checkbox} type="checkbox" required />
+                            <p className="cursor-pointer" onClick={ShowTerms}> Terms and conditions </p>
                         </div>
                         <br />
                         <div>
                             <button className="bg-purple-800 py-2 w-full rounded flex justify-center hover:bg-purple-900 text-white font-bold">Submit</button>
                         </div>
-
                     </form>
                 </div>
 
 
             </div>
             <div >
-            <div className="absolute top-10 left-80  right-80 m-20 inset-0 bg-black bg-opacity-25
-                 backdrop-blur-sm  justify-center items-center hidden "   id="Terms"  >
-                <div className="bg-white  p-2 rounded " >
+            <div ref={termsRef}  className="absolute h-screen w-full inset-0 bg-black bg-opacity-25
+                 backdrop-blur-sm hidden justify-center items-center" id="Terms"  >
+                <div className="flex flex-col bg-white w-fit p-4 rounded justify-center" >
                     <div className="font-bold" >
                         Terms of services</div>
-                    <p className="text-sm overflow-y-scroll h-96 p-2 ">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
-                            <br />
-                            placeat in consectetur, illo fugiat odio vero quae incidunt ipsa voluptatibus id at! Nisi blanditiis,
-                            <br />
-                            nesciunt a aspernatur deserunt non ipsum laudantium quasi consequuntur
-                            aliquid eaque ipsam hic officiis
-                            <br />
-                            quibusdam possimus ducimus maiores beatae
-                            fuga architecto quis debitis repudiandae itaque.
-                            <br />
-                        </p>
-                        <p >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
-                            <br />
-                            placeat in consectetur, illo fugiat odio vero quae incidunt ipsa voluptatibus id at! Nisi blanditiis,
-                            <br />
-                            nesciunt a aspernatur deserunt non ipsum laudantium quasi consequuntur
-                            aliquid eaque ipsam hic officiis
-                            <br />
-                            quibusdam possimus ducimus maiores beatae
-                            fuga architecto quis debitis repudiandae itaque.
-                            <br />
-                        </p>
-                        <p >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
-                            <br />
-                            placeat in consectetur, illo fugiat odio vero quae incidunt ipsa voluptatibus id at! Nisi blanditiis,
-                            <br />
-                            nesciunt a aspernatur deserunt non ipsum laudantium quasi consequuntur
-                            aliquid eaque ipsam hic officiis
-                            <br />
-                            quibusdam possimus ducimus maiores beatae
-                            fuga architecto quis debitis repudiandae itaque.
-                            <br />
-                        </p>
-                        <p >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
-                            <br />
-                            placeat in consectetur, illo fugiat odio vero quae incidunt ipsa voluptatibus id at! Nisi blanditiis,
-                            <br />
-                            nesciunt a aspernatur deserunt non ipsum laudantium quasi consequuntur
-                            aliquid eaque ipsam hic officiis
-                            <br />
-                            quibusdam possimus ducimus maiores beatae
-                            fuga architecto quis debitis repudiandae itaque.
-                            <br />
-                        </p>
-                        <p >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
-                            <br />
-                            placeat in consectetur, illo fugiat odio vero quae incidunt ipsa voluptatibus id at! Nisi blanditiis,
-                            <br />
-                            nesciunt a aspernatur deserunt non ipsum laudantium quasi consequuntur
-                            aliquid eaque ipsam hic officiis
-                            <br />
-                            quibusdam possimus ducimus maiores beatae
-                            fuga architecto quis debitis repudiandae itaque.
-                            <br />
-                        </p>
-                        <p >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
-                            <br />
-                            placeat in consectetur, illo fugiat odio vero quae incidunt ipsa voluptatibus id at! Nisi blanditiis,
-                            <br />
-                            nesciunt a aspernatur deserunt non ipsum laudantium quasi consequuntur
-                            aliquid eaque ipsam hic officiis
-                            <br />
-                            quibusdam possimus ducimus maiores beatae
-                            fuga architecto quis debitis repudiandae itaque.
-                            <br />
-                        </p>
-                        <p >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis,
-                            <br />
-                            placeat in consectetur, illo fugiat odio vero quae incidunt ipsa voluptatibus id at! Nisi blanditiis,
-                            <br />
-                            nesciunt a aspernatur deserunt non ipsum laudantium quasi consequuntur
-                            aliquid eaque ipsam hic officiis
-                            <br />
-                            quibusdam possimus ducimus maiores beatae
-                            fuga architecto quis debitis repudiandae itaque.
-                            <br />
-                        </p>
+                    <p className="text-sm overflow-y-scroll h-96 w-[20rem] p-2 ">
+                        {data.terms}                     
                     </p>
-                    <br />
                     <h4 className="uppercase text-center">I agree to the <span className="text-red-600">Terms of Services </span> and I read the Privacy Notice. </h4>
                     <div className=" flex pt-10 justify-center  text-white ">
-                        <button  className="bg-gray-600 pr-14 pl-14 pt-1 pb-2 mb-2 w-full rounded  transition-0.3 hover:bg-red-500 cursor-pointer"  >I Accept</button>
+                        <button onClick={Clicked} className="bg-gray-600 pr-14 pl-14 pt-1 pb-2 mb-2 w-full rounded  transition-0.3 hover:bg-red-500 cursor-pointer">I Accept</button>
                     </div>
                 </div>
 
